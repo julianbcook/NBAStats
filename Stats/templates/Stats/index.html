@@ -1,6 +1,5 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
 
   <head>
 
@@ -106,22 +105,22 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="{% static 'login.html' %}">Login</a>
-            <a class="dropdown-item" href="{% static 'register.html' %}">Register</a>
-            <a class="dropdown-item" href="{% static 'forgot-password.html' %}">Forgot Password</a>
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="register.html">Register</a>
+            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
             <div class="dropdown-divider"></div>
             <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="{% static '404.html' %}">404 Page</a>
-            <a class="dropdown-item" href="{% static 'blank.html' %}">Blank Page</a>
+            <a class="dropdown-item" href="404.html">404 Page</a>
+            <a class="dropdown-item" href="blank.html">Blank Page</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% static 'charts.html' %}">
+          <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% static 'tables.html' %}">
+          <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
         </li>
@@ -757,19 +756,19 @@
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}"></script>
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="{% static 'vendor/chart.js/Chart.min.js'%}"></script>
-    <script src="{% static 'vendor/datatables/jquery.dataTables.js'%}"></script>
-    <script src="{% static 'vendor/datatables/dataTables.bootstrap4.js'%}"></script>
+    <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+    <script src="{% static 'vendor/datatables/jquery.dataTables.js' %}"></script>
+    <script src="{% static 'vendor/datatables/dataTables.bootstrap4.js' %}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
+    <script src="{% static 'js/sb-admin.min.js' %}"></script>
 
     <!-- Demo scripts for this page-->
-    <script src="js/demo/datatables-demo.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+    <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
 
   </body>
 
