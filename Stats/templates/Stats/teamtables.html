@@ -144,8 +144,10 @@
             <li class="breadcrumb-item active">Tables</li>
           </ol>
 
+
+
           <!-- DataTables Example -->
-          <h1>NBA Players</h1>
+          <h1>NBA Teams</h1>
            <!-- <ul>{% for p in playerList %}
             <li>{{p.p_pname}}</li>
             {%  endfor %}
@@ -153,29 +155,29 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              NBA Players</div>
+              NBA Teams</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Points</th>
-                      <th>Age</th>
-                      <th>Assists</th>
+                      <th>Wins</th>
+                      <th>Loss</th>
+                      <th>W/L Ratio</th>
                       <th>Field Goal %</th>
                       <th>3 Point %</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {% for p in playerList %}
+                    {% for t in teamList %}
                     <tr>
-                        <td>{{p.p_pname}}</td>
-                        <td>{{p.p_points}}</td>
-                        <td>{{p.p_age}}</td>
-                        <td>{{p.p_assists}}</td>
-                        <td>{{p.p_fgp}}</td>
-                        <td>{{p.p_3pp}}</td>
+                        <td>{{t.t_name}}</td>
+                        <td>{{t.t_wins}}</td>
+                        <td>{{t.t_loss}}</td>
+                        <td>{{t.t_ratio}}</td>
+                        <td>{{t.t_fgp}}</td>
+                        <td>{{t.t_3pp}}</td>
                     </tr>
                     {% endfor %}
                   </tbody>
