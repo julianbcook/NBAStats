@@ -29,9 +29,20 @@ def tables(request):
     all_players = Player.objects.all()
     query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp FROM PLAYER"
     q = []
-    
+
     for p in Player.objects.raw(query):
         q.append(p)
 
     args = {'playerList' : q}
     return render(request,'Stats/tables.html', args)
+
+def teamtables(request):
+    all_teams = Team.objects.all()
+    query = "SELECT 1 id, t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp FROM team"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/teamtables.html', args)

@@ -12,4 +12,5 @@ urlpatterns = [
                url(r'^f',views.forgot, name = 'forgotPassword'),
                url(r'^4',views.badPage, name = '404Page'),
                url(r'^b',views.blank, name = 'blank'),
+               url(r'^tt', views.teamtables, name = 'teamtables'),
 ]
