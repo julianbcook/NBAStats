@@ -14,7 +14,7 @@ example:
                 Windows: https://docs.djangoproject.com/en/2.1/howto/windows/
                 
 
-2 - run command:  python manage.py runserver
+2 - run command:  **python manage.py runserver**
 
 terminal will give you the link to access the web app
 
