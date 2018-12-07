@@ -66,6 +66,400 @@ def teamtables(request):
     args = {'teamList':q}
     return render(request, 'Stats/teamtables.html', args)
 
+def limitEntriestoTenforTeam(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team LIMIT 10"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/10Entry', args)
+def limitEntriesto25forTeam(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team LIMIT 25"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/25Entry', args)
+
+def limitEntriesto50forTeam(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team LIMIT 50"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/50Entry', args)
+
+def sortByTeamNameASC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_name ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByName', args)
+
+def sortByTeamNameDESC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_name DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByName', args)
+
+def sortByTeamWinsASC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_wins ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByWins', args)
+
+def sortByTeamWinsDESC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_wins DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByWins', args)
+
+def sortByTeamLossesDESC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_loss DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByLosses', args)
+
+def sortByTeamLossesASC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_loss ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByLosses', args)
+
+def sortByTeamRatioASC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_ratio ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByRatio', args)
+
+def sortByTeamRatioDESC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_ratio DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByRatio', args)
+
+def sortByTeamFieldGoalDESC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_fgp DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByFGP', args)
+
+def sortByTeamFieldGoalASC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_fgp ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByFGP', args)
+
+
+def sortByTeam3PPDESC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_3pp DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderBy3pp', args)
+
+def sortByTeam3PPASC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_3pp ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderBy3pp', args)
+
+def sortByTeamABRDESC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_abr DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByABR', args)
+
+def sortByTeamABRASC(request):
+    query = "SELECT 1 id,t_name, t_wins, t_loss, t_ratio, t_fgp, t_3pp, t_abr FROM team ORDER BY t_abr ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+
+
+    return render(request, 'Stats/orderByABR', args)
+
+def limitEntriestoTenforPlayers(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER LIMIT 10"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/10Entry', args)
+def limitEntriesto25forPlayers(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER LIMIT 25"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/25Entry', args)
+
+def limitEntriesto50forPlayers(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER LIMIT 50"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/50Entry', args)
+
+def limitEntriesto100forPlayers(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER LIMIT 100"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/100Entry', args)
+
+def sortByPlayerNameASC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_pname ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByName', args)
+
+def sortByPlayerNameDESC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_pname DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByName', args)
+def sortByPlayerPointsASC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_points ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByPoints', args)
+def sortByPlayerPointsDESC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_points DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByPoints', args)
+def sortByPlayerAGEASC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_age ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByAge', args)
+
+def sortByPlayerAgeDESC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_age DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByAge', args)
+def sortByPlayerAssistsDESC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_assists DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByAssists', args)
+
+def sortByPlayerAssistsASC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_assists ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByAssists', args)
+
+def sortByPlayerfppASC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_fgp ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByfgp', args)
+def sortByPlayerfppDESC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_fgp DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByfgp', args)
+
+
+def sortByPlayer3ppASC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_3pp ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortBy3fgp', args)
+
+def sortByPlayer3ppDESC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_3pp DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortBy3fgp', args)
+
+def sortByPlayerReboundsASC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_rebounds ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByRB', args)
+
+def sortByPlayerReboundsDESC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER ORDER BY p_rebounds DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByRB', args)
+
+def sortByPlayerteamASC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds,p_abr FROM PLAYER ORDER BY p_abr ASC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByabr', args)
+
+def sortByPlayerteamDESC(request):
+    query = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds,p_abr FROM PLAYER ORDER BY p_abr DESC"
+    q = []
+
+    for t in Team.objects.raw(query):
+        q.append(t)
+
+    args = {'teamList':q}
+    return render(request, 'Stats/sortByabr', args)
+
+
 def GoldenState(request):
     query = "SELECT 1 id, m_teamB_Name, m_teamA_result, m_date FROM MATCHUP WHERE m_teamA_Name = 'Golden State Warriors'"
     queryForPlayers = "SELECT 1 id, p_pname, p_age, p_points, p_assists, p_fgp, p_3pp, p_minutes, p_rebounds FROM PLAYER INNER JOIN TEAM ON p_abr = t_abr WHERE t_name = 'Golden State Warriors'"
