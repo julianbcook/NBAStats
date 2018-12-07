@@ -4,7 +4,8 @@ NBA statistics for a project in CSE111: Database Systems
 This app uses Django along with sqlite3 to create analytics for player and team statistics in the National Basketball League.
 This app is a small project for CSE111: Database Systems at UC Merced
 
-
+# Queries ran in program can be found in:
+**Stats/views.py**
 # INSTRUCTIONS TO RUN
 
 1 - Install Django onto your machine
