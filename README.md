@@ -9,7 +9,7 @@ This app is a small project for CSE111: Database Systems at UC Merced
 
 1 - Install Django onto your machine
 example: 
-                for MAC Terminal: pip install Django
+                for MAC Terminal: **pip install Django**
                 
                 Windows: https://docs.djangoproject.com/en/2.1/howto/windows/
                 
