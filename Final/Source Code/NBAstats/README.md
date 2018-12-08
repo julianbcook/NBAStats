@@ -1,3 +1,9 @@
+# CONTRIBUTERS
+Julian Cook (julianbcook) & Jose Herrerez (JoseH1797 & elkomanderJOZZI)
+
+
+https://www.github.com/julianbcook/NBAStats
+
 # NBAStats
 NBA statistics for a project in CSE111: Database Systems
 
