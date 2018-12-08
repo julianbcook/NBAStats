@@ -1,3 +1,8 @@
+# CONTRIBUTERS
+Julian Cook (julianbcook) & Jose Herrerez (JoseH1797 & elkomanderJOZZI)
+
+
+
 # NBAStats
 NBA statistics for a project in CSE111: Database Systems
 
