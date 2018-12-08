@@ -1,5 +1,6 @@
 # CONTRIBUTERS
 Julian Cook (julianbcook) & Jose Herrerez (JoseH1797 & elkomanderJOZZI)
+https://www.github.com/julianbcook/NBAStats
 
 
 
