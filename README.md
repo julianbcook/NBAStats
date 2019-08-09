@@ -1,9 +1,3 @@
-# CONTRIBUTERS
-Julian Cook (julianbcook) & Jose Herrerez (JoseH1797 & elkomanderJOZZI)
-https://www.github.com/julianbcook/NBAStats
-
-
-
 # NBAStats
 NBA statistics for a project in CSE111: Database Systems
 
@@ -35,3 +29,5 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 
 END SAMPLE OUTPUT - link: http://127.0.0.1:8000/
+
+Requires Python version 2.7+
